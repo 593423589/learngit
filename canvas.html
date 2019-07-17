@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>canvas画布</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		/*#canvas{
+			width:200px;height:200px;background:orange
+		}*/
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="1000px" height="600px" style="background:pink">
+		
+	</canvas>
+	<!-- <div id="canvas" style="width:200px;height:200px;background:pink"  ></div> -->
+
+</body>
+<script type="text/javascript">
+	var canvas=document.getElementById("canvas");
+	var context=canvas.getContext("2d");
+	// context.fillRect(10,10,50,50);
+	// function paint(){            //自动创建矩形
+ //       const HEIGHT=canvas.height;
+	//    const WIDTH=canvas.width;
+	//    var x=parseInt(Math.random()*WIDTH);
+	//    var y=parseInt(Math.random()*HEIGHT);
+ //   	   var width=parseInt(Math.random()*WIDTH);
+	//    var height=parseInt(Math.random()*HEIGHT);
+	//    var r=parseInt(Math.random()*256);
+	//    var g=parseInt(Math.random()*256);
+	//    var b=parseInt(Math.random()*256);
+	//    context.strokeStyle="rgb("+r+","+g+","+b+")";
+	//    context.fillStyle="rgb("+r+","+g+","+b+")";
+	//    // context.globalAlpha(0.2);
+	//    context.strokeRect(x,y,width,height);
+	//    context.fillRect(x,y,width,height);
+	//    // context.clearRect(10,10,1000,1000);    //清除矩形
+
+	// }
+	// timer=setInterval("paint()",1);
+
+
+	// var grd=context.createLinearGradient(0,0,canvas.width,canvas.height); //线性渐变
+	// grd.addColorStop(0,"red");
+	// grd.addColorStop(1,"pink");
+	// context.fillStyle=grd;
+	// context.fillRect(0,0,canvas.width,canvas.height);
+
+
+	// var grd=context.createRadialGradient(50,50,500,0,0,50);  //扇形渐变
+ //    grd.addColorStop(0,"red");
+	// grd.addColorStop(1,"yellow");
+	// context.fillStyle=grd;
+	// context.fillRect(0,0,canvas.width,canvas.height);
+
+ //    context.beginPath();    //制作基准线
+	// context.moveTo(0,300);
+	// context.lineTo(500,300);
+	// context.stroke();
+	// context.textBaseline="middle";
+	// context.beginPath();    //制作基准线
+	// context.moveTo(0,400);
+	// context.lineTo(500,400);
+	// context.stroke();
+	// context.textBaseline="top";
+	// context.rect(10,10,100,100);
+	// context.rect(100,100,100,100);
+	// context.arc(300,300,50,0,360);
+	// context.arc(300,300,50,0,360);
+	// context.font="bold 50px 微软雅黑";
+	// context.fillText("微软雅黑",200,300);
+	// context.strokeText("微软雅黑",100,400);
+
+
+	context.fillStyle="#ffffff";        //制作圆形(太极)
+	context.arc(300,300,100,0,Math.PI*2);
+	context.fill();
+	context.beginPath();
+	context.fillStyle="#000000";
+	context.arc(300,300,100,Math.PI/2,Math.PI*3/2);
+	context.fill();
+	context.beginPath();
+	context.arc(300,250,50,0,Math.PI*2);
+	context.fill();	
+	context.beginPath();
+	context.fillStyle="#ffffff";
+	context.arc(300,350,50,0,Math.PI*2);
+	context.fill();	
+	context.beginPath();
+	context.fillStyle="#ffffff";
+	context.arc(300,250,15,0,Math.PI*2);
+	context.fill();	
+	context.beginPath();
+	context.fillStyle="#000000";
+	context.arc(300,350,15,0,Math.PI*2);
+	context.fill();	
+	
+	
+</script>
+</html>
